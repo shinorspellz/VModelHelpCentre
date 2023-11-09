@@ -1,0 +1,74 @@
+/* Styles for the outer container */
+.faq__question-answer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #fff;
+}
+
+/* Styles for the main content container */
+/* .faq-content {
+} */
+
+/* Additional styles for the accordion layout */
+.faq-content--accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for the heading */
+.web_ui__Text__text.web_ui__Text__heading {
+  color: #edceab;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styles for the paragraphs and spans */
+.web_ui__Text__text.web_ui__Text__body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Styles for the list items */
+.web_ui__Text__text.web_ui__Text__body ul li {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+/* Styles for the heading within the list */
+.c-text.c-text--heading {
+  color: #edceab;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styles for the blockquote and its content */
+.default-note,
+.important-note {
+  background-color: #554544;
+  border-left: 4px solid #ccd2db;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+/* Styles for the blockquote text */
+.default-note span,
+.important-note span {
+  font-style: italic;
+  /* color: #666; */
+}
+
+/* Styles for the links within the content */
+.web_ui__Text__text.web_ui__Text__body a {
+  color: #ffcccc;
+  text-decoration: none;
+  border-bottom: 1px solid #ffcccc;
+}
+
+.web_ui__Text__text.web_ui__Text__body a:hover {
+  color: #ffcccc9f;
+  border-bottom-color: #ffcccc9f;
+}
