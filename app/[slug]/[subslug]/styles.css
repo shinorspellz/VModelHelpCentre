@@ -1,44 +1,56 @@
 /* Styles for the outer container */
-.faq__question-answer {
+.faq article {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #fff;
+  border: 1px solid #edceab86;
+  border-radius: 21px;
 }
-
+@media screen and (max-width: 640px) {
+  .faq article {
+    padding: 10px;
+  }
+}
 /* Styles for the main content container */
-/* .faq-content {
+/* article {
 } */
 
 /* Additional styles for the accordion layout */
-.faq-content--accordion {
+.faq article {
   display: flex;
   flex-direction: column;
 }
 
 /* Styles for the heading */
-.web_ui__Text__text.web_ui__Text__heading {
+.faq h1 {
   color: #edceab;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
+.faq h2 {
+  color: #edceab;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 /* Styles for the paragraphs and spans */
-.web_ui__Text__text.web_ui__Text__body {
+.faq p,
+.faq span {
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
 }
 
 /* Styles for the list items */
-.web_ui__Text__text.web_ui__Text__body ul li {
+.faq ul li {
   list-style: disc;
   margin-left: 20px;
 }
 
 /* Styles for the heading within the list */
-.c-text.c-text--heading {
+.faq article div {
   color: #edceab;
   font-size: 18px;
   font-weight: bold;
@@ -46,8 +58,8 @@
 }
 
 /* Styles for the blockquote and its content */
-.default-note,
-.important-note {
+.faq blockquote,
+.faq .default-note {
   background-color: #554544;
   border-left: 4px solid #ccd2db;
   padding: 15px;
@@ -55,20 +67,22 @@
 }
 
 /* Styles for the blockquote text */
-.default-note span,
-.important-note span {
+.faq .default-note span,
+.faq .important-note span {
   font-style: italic;
   /* color: #666; */
 }
 
 /* Styles for the links within the content */
-.web_ui__Text__text.web_ui__Text__body a {
+.faq a,
+.faq a span {
   color: #ffcccc;
   text-decoration: none;
   border-bottom: 1px solid #ffcccc;
 }
 
-.web_ui__Text__text.web_ui__Text__body a:hover {
+.faq a:hover,
+.faq a span:hover {
   color: #ffcccc9f;
   border-bottom-color: #ffcccc9f;
 }

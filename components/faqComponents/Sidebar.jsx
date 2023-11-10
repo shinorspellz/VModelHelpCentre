@@ -7,30 +7,29 @@ import React from "react";
 const Sidebar = ({ show }) => {
   const pathname = usePathname();
   const currentroute = pathname.split("/")[1];
+  const subCurrentRoute = pathname.split("/")[2];
   const hoverEffect = "hover:bg-[#edceaba6]";
 
   const showMobile = show !== "mobile" ? "hidden  md:flex" : "flex md:hidden";
-  console.log(showMobile);
   return (
     <div className={`flex-col min-w-[290px]  max-w-[290px] ${showMobile}`}>
       <Link href={"/"}>
         <p
-          className={`p-4 ${hoverEffect} cursor-pointer ${
+          className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer ${
             !currentroute ? "text-[#EDCEAB] font-medium" : "text-white"
           }`}
-          key={0o1}
+          key={"kjlk"}
         >
           {"Home"}
         </p>
       </Link>
       {generalTopics.map((topic, index) => {
         const subTopic = subTopics[topic.link];
-
         return (
-          <>
-            <Link href={"/" + topic.link} key={index + topic.link}>
+          <React.Fragment key={index}>
+            <Link href={"/" + topic.link}>
               <p
-                className={`p-4 ${hoverEffect} cursor-pointer  ${
+                className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer  ${
                   topic.link === currentroute
                     ? "text-[#EDCEAB] font-medium "
                     : ""
@@ -41,7 +40,7 @@ const Sidebar = ({ show }) => {
               </p>
             </Link>
             {topic.link === currentroute ? (
-              <div class=" ">
+              <div className=" ">
                 {subTopic.map((topic, index) => {
                   return (
                     <Link
@@ -49,7 +48,11 @@ const Sidebar = ({ show }) => {
                       key={index}
                     >
                       <div
-                        className={`text-sm ml-7  text-gray-300  ${hoverEffect} p-2 m-2  `}
+                        className={`text-sm ml-7 rounded-[21px] ${
+                          topic.link === subCurrentRoute
+                            ? "text-[#EDCEAB]"
+                            : " text-gray-300 "
+                        }${hoverEffect} p-2 m-2  `}
                       >
                         <span>{topic.name}</span>
                       </div>
@@ -58,7 +61,7 @@ const Sidebar = ({ show }) => {
                 })}
               </div>
             ) : null}
-          </>
+          </React.Fragment>
         );
       })}
     </div>

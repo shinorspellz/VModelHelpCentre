@@ -1,16 +1,23 @@
 "use client";
-import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import React, { useEffect } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Sidebar from "./faqComponents/Sidebar";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
-        <Image height={65} src={logo} />
+        <Image
+          alt="vmodel logo"
+          height={65}
+          className="h-14 md:h-16"
+          src={logo}
+        />
         {/* <span className="text-2xl font-bold">Help Center</span> */}
         <div className="flex ">
           <input
@@ -27,14 +34,42 @@ const Navbar = () => {
         <div className="md:hidden">
           <AiOutlineMenu size={32} onClick={() => setShow((init) => !init)} />
         </div>
-        {show ? (
-          <div className="absolute right-1 top-16 bg-black z-50">
-            <Sidebar show={"mobile"} />
-          </div>
-        ) : null}
+        {show ? <Menu setShow={setShow} /> : null}
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+const Menu = ({ setShow }) => {
+  const pathname = usePathname();
+  useEffect(() => {
+    // Set the overflow property to 'hidden' when the component mounts
+    document.body.style.overflow = "hidden";
+    // Clean up: Set the overflow property back to 'auto' when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+  // useEffect(() => {
+  //   setShow(false);
+  // }, [pathname[0], pathname[1], pathname[2]]);
+  return (
+    <div
+      id="nav_menu"
+      className="h-screen w-screen top-0 left-0 bottom-2 overflow-x-auto fixed z-50 bg-[#00000067] "
+      onClick={(e) => e.target.id === "nav_menu" && setShow(false)}
+    >
+      <div className="relative">
+        <div className="absolute right-4 px-4  pt-4 top-16 bg-black  mb-2 rounded-[21px]">
+          <div className="flex justify-between ">
+            <h1>Help Centre</h1>
+            <AiOutlineClose size={32} onClick={() => setShow(false)} />
+          </div>
+          <Sidebar show={"mobile"} />
+        </div>
+      </div>
+    </div>
+  );
+};

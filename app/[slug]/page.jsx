@@ -15,7 +15,7 @@ const page = ({ params }) => {
   const heading = generalTopics.find((topic) => topic.link === params.slug);
   return (
     <div className="w-full">
-      <h1 className="text-xl font-medium">{heading.name}</h1>
+      <h1 className="text-2xl font-semibold">{heading.name}</h1>
       <div>
         {subTopic.map((topic, index) => {
           return (
@@ -23,7 +23,7 @@ const page = ({ params }) => {
               <div
                 className={`${
                   !!index && "border-t"
-                } p-4 border-gray-100 w-full flex  sm:gap-5 md:gap-16 lg:gap-48 justify-between font-medium item-center  `}
+                } pt-5 p pb-2 px-2 border-[#edceab86] w-full flex  sm:gap-5 md:gap-16 lg:gap-48 justify-between font-medium item-center  `}
               >
                 <span>{topic.name}</span>
                 <AiOutlineRight size={18} />
