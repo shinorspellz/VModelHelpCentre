@@ -13,7 +13,7 @@ const page = () => {
         {generalTopics.map((topic, index) => {
           return (
             <Link
-              href={"/help/" + topic.link}
+              href={topic.link}
               className="w-1/2 md:w-1/3 lg:w-1/3"
               key={index}
             >
@@ -24,12 +24,6 @@ const page = () => {
           );
         })}
       </div>
-      {/* <div>
-        The current theme is: {theme}
-        <button onClick={() => setTheme("light")}>Light Mode</button>
-        <button onClick={() => setTheme("dark")}>Dark Mode</button> 
-      </div>
-        */}
     </div>
   );
 };

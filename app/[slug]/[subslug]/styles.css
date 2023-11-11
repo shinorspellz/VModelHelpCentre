@@ -53,7 +53,6 @@
 .faq article div {
   color: #edceab;
   font-size: 18px;
-  font-weight: bold;
   margin-top: 10px;
 }
 
@@ -79,6 +78,7 @@
   color: #ffcccc;
   text-decoration: none;
   border-bottom: 1px solid #ffcccc;
+  font-size: 15px;
 }
 
 .faq a:hover,
