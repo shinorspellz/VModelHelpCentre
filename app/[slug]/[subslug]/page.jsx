@@ -4,10 +4,21 @@ import React from "react";
 import "./styles.css";
 
 const page = ({ params }) => {
-  const { slug, subslug } = params;
+  let contentHTML;
+  try {
+    const { slug, subslug } = params;
+    contentHTML = subTopicContent[slug][subslug];
+  } catch (e) {
+    contentHTML = `<article>
+     <strong>404 subtopic for ${
+       params?.slug || "this topic"
+     } does not exist</strong>
+    </article>
+    
+    `;
+  }
 
-  const contentHTML = subTopicContent[slug][subslug];
-  console.log(contentHTML);
+  // console.log(contentHTML);
   return (
     <div className="faq">
       <div dangerouslySetInnerHTML={{ __html: contentHTML || egHTML }} />

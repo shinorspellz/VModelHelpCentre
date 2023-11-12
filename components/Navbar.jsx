@@ -12,12 +12,17 @@ const Navbar = () => {
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
-        <Image
-          alt="vmodel logo"
-          height={65}
-          className="h-14 md:h-16"
-          src={logo}
-        />
+        <div className="flex  items-center gap-3 md:gap-6 ">
+          <Image
+            alt="vmodel logo"
+            height={65}
+            className="h-14 md:h-16"
+            src={logo}
+          />
+          <h1 className="text-2xl md:text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
+            Help Center
+          </h1>
+        </div>
         {/* <span className="text-2xl font-bold">Help Center</span> */}
         <div className="flex ">
           <input

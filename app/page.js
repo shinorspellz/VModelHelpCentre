@@ -8,7 +8,7 @@ const page = () => {
 
   return (
     <div className="">
-      <h1>General Topics</h1>
+      <h1 className="text-2xl font-semibold mb-3">General Topics</h1>
       <div className="flex flex-wrap border border-gray-100 justify-stretch">
         {generalTopics.map((topic, index) => {
           return (
