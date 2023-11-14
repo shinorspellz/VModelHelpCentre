@@ -5,6 +5,7 @@ export const generalTopics = [
   { name: "Feed", link: "feed", icon: "" },
   { name: "User Options", link: "user_options", icon: "" },
   { name: "Discover", link: "discover", icon: "" },
+  { name: "Settings", link: "settings", icon: "" },
   { name: "QR Code", link: "qr_code", icon: "" },
   { name: "Invite and Earn", link: "invite_and_learn", icon: "" },
   { name: "VModel Credits (VMC)", link: "vmodel_credits", icon: "" },
@@ -22,6 +23,7 @@ export const subTopics = {
     { name: "Star sign ", link: "star_sign" },
     { name: "Reviews and Feedback", link: "review_and_feedback" },
     { name: "Location", link: "location" },
+    { name: "Grid and Galleries", link: "grid_and_galleries" },
 
     // { name: "Portfolio galleries/grids", link: "portfolio_galleries_grids" },
     // { name: "Messages", link: "messages" },
@@ -79,7 +81,18 @@ export const subTopics = {
       link: "most_popular_talent_near_you_rising_talent",
     },
   ],
-
+  settings: [
+    { name: "Porflio settings", link: "portfolio_settings" },
+    { name: "Account", link: "account" },
+    { name: "Gallaries", link: "galleries" },
+    { name: "Payments", link: "payments" },
+    { name: "Feed", link: "feed" },
+    { name: "Notifications", link: "notifications" },
+    { name: "Verification", link: "verification" },
+    { name: "Permissions", link: "permissions" },
+    { name: "Appearance", link: "appearance" },
+    { name: "Security and Privacy", link: "security_and_privacy" },
+  ],
   qr_code: [
     { name: "Creating QR codes", link: "creating_qr_codes" },
     { name: "Adjusting QR code colors", link: "adjusting_qr_code_colors" },
@@ -129,10 +142,7 @@ export const subTopicContent = {
         individual, present your skills, work, and offerings to the vibrant VModel community. It goes
         beyond a traditional resume or profile by providing a dynamic and visually engaging
         representation of your creative identity.</p>
-        <p>or</p>
-        <p>Your VModel Portfolio is like your own online stage. It's where you, as a creative, get to show off
-        your skills and work to the awesome VModel community. Think of it as more exciting than a
-        regular resumje or profile. It's all about giving a cool and visual peek into your creative side.</p>
+        
         <div></div>
         <ul>
         <li>Grids</li>
@@ -149,8 +159,8 @@ export const subTopicContent = {
                        <h1>Portfolio Image</h1>
                        <div></div>
                        <p>Let's talk about VModel's portfolio image - it's not just a picture, it's like your creative calling card. It's the
-                       first thing folks see when they check you out on VModel. So, think of it as your chance to say, "Hey, this
-                       is me, and this is what I'm all about!" Pick an image that feels true to your style and personality,
+                       first thing folks see when they check you out on VModel. So, think of it as your chance to say, <i>"Hey, this
+                       is me, and this is what I'm all about!"</i> Pick an image that feels true to your style and personality,
                        something that speaks volumes without saying a word. Your VModel portfolio image isn't just a snapshot;
                        it's your story in pixels. Choose wisely, and let your creativity shine through!</p>
                        <div></div>
@@ -162,11 +172,10 @@ export const subTopicContent = {
                       </article>`,
     bio: `<article><h1>Bio</h1>
               <div>
-            <p> Introduce yourself to the VModel community with a captivating bio! Share what makes you tick, your
-              passions, and the story behind your creative journey. Remember, on VModel, longer bios are like your
-              space to really express yourself. They let others get to know you better before they even think about
-              booking or reaching out. So, spill the beans and let your creativity shine!
-
+            <p> Introduce yourself to the VModel community with a captivating bio! Introduce yourself to the VModel community with a captivating bio! Share what makes you tick, your
+            passions, and the story behind your creative journey. Remember, on VModel, longer bios are like your
+            space to really express yourself. They let others get to know you better before they even think about
+            booking or reaching out. So, spill the beans and let your creativity shine!
             </p>
             <div></div>
               <ul><li><a>How to edit/change your Bio</a></li></ul>
@@ -178,8 +187,7 @@ export const subTopicContent = {
     <h1>Menu icon</h1>
     <div>
     <p>
-    Accessing your menu is straightforward: find the icon at the top right of your VModel Portfolio. A simple
-    tap opens up various features for you to explore and enhance your VModel experience!
+    Accessing your menu is straightforward: find the icon at the top right of your VModel Portfolio. A simple tap opens up various features for you to explore and enhance your VModel experience!
     </p>
     </div>
 </article>`,
@@ -223,6 +231,20 @@ export const subTopicContent = {
                   services nearby and receiving recommendations for talent based on your location.</p>
                 </div>
               </article>`,
+    grid_and_galleries: `<article>
+    <h1>Grids and Galleries</h1>
+    <div>
+    <p>
+    Galleries on VModel serve as captivating grid albums intricately woven into your portfolio, offering a
+    dynamic presentation of your creative identity. Crafted seamlessly at upload, each gallery acts as a
+    unique chapter, narrating a specific part of your story or showcasing diverse skills. With the ability to
+    create multiple galleries, effortlessly navigate through a member's artistic journey by swiping horizontally on their portfolio. Tapping on any content within a gallery expands it into a feed, providing a more
+    immersive and detailed view of the showcased creations. You can also view as slides if you wished to.
+    It's a visual journey that allows you to curate and express the full spectrum of your creative prowess
+    within the vibrant VModel community.
+    </p>
+    </div>
+    </article>`,
     // portfolio_galleries_grids: `<article><h1></h1></article>`,
     // messages: `<article><h1></h1></article>`,
     // my_network: `<article><h1></h1></article>`,
@@ -240,10 +262,6 @@ export const subTopicContent = {
                         Whether you're delving into analytics, checking your earnings, or managing your availability, the
                         Business Hub has you covered. It's your central command for keeping tabs on your professional journey,
                         tracking your progress, and more, all conveniently consolidated in one place. Your career, simplified and
-                        streamlined with VModel's Business Hub. Here are the tools you can access with the VModel Hub:Welcome to the VModel Business Hub – your go-to destination for all things professional on VModel.
-                        Whether you're delving into analytics, checking your earnings, or managing your availability, the
-                        Business Hub has you covered. It's your central command for keeping tabs on your professional journey,
-                        tracking your progress, and more, all conveniently consolidated in one place. Your career, simplified and
                         streamlined with VModel's Business Hub. Here are the tools you can access with the VModel Hub:
                         </p>
                       </div>
@@ -256,7 +274,8 @@ export const subTopicContent = {
                           bookings? No problem. This feature lets you effortlessly clear your schedule right within the app.
                           Perfect for those with tight creative windows or other commitments. Take control of your
                           availability and make sure your time on the platform aligns seamlessly with your creative flow or
-                          other engagements. Your schedule, your way, with VModel's Unavailability Tool.</p>
+                          other engagements. Your schedule, your way, with VModel's Unavailability Tool.
+                          </p>
                         </div>
                       </article>`,
     bookings: `<article>
@@ -302,9 +321,7 @@ export const subTopicContent = {
                   <h1>Applications</h1>
                   <div>
                     <p>The Applications List is your curated compilation of jobs you've applied to on VModel. It's your
-                    handy reference for tracking your engagement and connection with potential opportunities. Keep
-                    tabs on your applications, making it easy to stay organized and informed about the positions
-                    you're pursuing within the VModel community. Your applied jobs, neatly listed for your
+                    handy reference for tracking your engagement and connection with potential opportunities. Keep tabs on your applications, making it easy to stay organized and informed about the positions you're pursuing within the VModel community. Your applied jobs, neatly listed for your
                     convenience.
                      </p>
                   </div>
@@ -539,8 +556,7 @@ export const subTopicContent = {
                 The Connect function not only lets you establish meaningful relationships but also enables
                 direct communication through messaging with your connections. Unlike the Follow feature, this
                 personal touch allows for more direct and private interaction with those you connect with. For
-                those who prefer a follower-centric experience, you have the flexibility to manage your
-                connection settings. If you only want followers, simply turn of connections in your settings. It's
+                those who prefer a follower-centric experience, you have the flexibility to manage your <u>connection settings</u>. If you only want followers, simply <u>turn of connections</u> in your settings. It's
                 your choice, offering a personalised and tailored social experience on VModel.
                 </p>
               </div>
@@ -734,6 +750,120 @@ export const subTopicContent = {
       </div>
     </article>
     `,
+  },
+  settings: {
+    portfolio_settings: `<article>
+    <h1>Porfolio settings</h1>
+    <div>
+    <p>
+    Within Portfolio Settings, you have the flexibility to fine-tune and customise all the features we
+    previously discussed in your portfolio. This comprehensive control allows you to adjust your bio,
+    Display name, themes, visual elements, descriptions, and media content. Whether you're
+    updating contact information, optimising privacy settings, or refining the overall appearance of
+    your portfolio, Portfolio Settings empower you to craft a showcase that perfectly aligns with your
+    creative vision within the dynamic VModel community.
+    </p><div></div><p>To customise your portfolio, simply go to the menu, then navigate to settings. You'll find the
+    Portfolio Settings option conveniently located in this section.
+    </p>
+    </div>
+    </article>`,
+    account: `<article>
+    <h1>Account</h1>
+    <div>
+    <p>
+    Within Account Settings, you have the flexibility to adjust various features related to your
+    account, such as personal information, email, phone number, or location. All these settings are
+    at your fingertips, providing you with the ability to customise and refine your account details
+    according to your preferences.
+    </p><div></div>
+    <p>To customise your account details, simply navigate to the menu and then select settings. You'll
+    find the Account Settings option conveniently located here.
+    </p>
+    </div>
+    </article>`,
+    galleries: `<article>
+    <h1>Galleries</h1>
+    <div>
+    <p>
+    Within Gallery Settings, you have the power to customize all aspects of your galleries – those
+    captivating albums in your portfolio. Whether you want to <b>edit</b>, <b>rename</b>, or <b>delete galleries</b>,
+    either from either your portfolio or your polaroid. This centralised space gives you complete
+    control over the presentation and organisation of your visual narrative on VModel.
+    </p><div></div>
+    <p>To edit your galleries, head to the menu, and then access settings. Gallery settings are located within settings.
+    </p>
+    </div>
+    </article>`,
+    payments: `<article>
+    <h1>Payments</h1>
+    <div>
+    <p>
+    Within Payment Settings, you have the flexibility to adjust all payment-related settings. Easily
+    add or remove payment methods and make changes to your currency type where applicable.
+    </p><div></div>
+    <p>To edit your galleries, head to the menu, and then access settings. Gallery settings are located within settings.
+    </p>
+    <div></div>
+    <p>To edit your payments, head to the menu, and then access settings. Payment settings are
+    located within settings.</p>
+    </div>
+    </article>`,
+    feed: `<article>
+    <h1>Feed</h1>
+    <div>
+    <p>
+    VModel's feed is a dynamic and visual stream that presents a curated collection of content from
+    its diverse community of creatives. Comprising images, videos, and other creative expressions,
+    the feed showcases the latest updates, projects, and artistic endeavors of models, influencers or
+    creators, photographers, cooks, and various other creative individuals. Members can scroll
+    through this vibrant feed to discover new content, stay updated on the latest trends, and engage
+    with the artistic narratives shared by fellow VModel community members. It serves as a central
+    space for creative exploration, connection, and inspiration within the VModel platform.
+    </p><div></div>
+    <p>To edit your galleries, head to the menu, and then access settings. Gallery settings are located within settings.
+    </p>
+    <div></div>
+    <p>From feed settings, you can adjust the <b>default feed view</b></p>
+    </div>
+    </article>`,
+    notifications: `<article>
+    <h1>Notification</h1>
+    <div>
+    <p>
+    Within Notifications Settings, you have the ability to customize all notification preferences
+    according to your preferences. Tailor your notification experience by adjusting options related to
+    messages, job updates, and more.
+    </p><div>
+    <div></div>
+    <p>To change/ update your notifications settings, head to the menu, and then access settings.
+    notifications settings are located within settings.</p>
+    </div>
+    </article>`,
+    verification: `<article>
+    <h1>Verification</h1>
+    <div>
+    <p>
+    Within Verification Settings, you can take two key actions to enhance your profile's credibility.
+    First, you can apply for ID verification, symbolised by a grey tick. Second, you can apply for blue
+    tick verification, a symbol of fame-based verification. It's essential to note that VModel
+    mandates verification for those participating in remote jobs or services, ensuring a secure and
+    trustworthy environment. The grey tick signifies ID verification, while the blue tick represents
+    verification based on fame within the VModel community. These verification measures
+    contribute to a safer and more reliable experience for all users.
+    </p>
+    </div>
+    </article>`,
+    permissions: `<article>
+    <h1>Permissions</h1>
+    <div>
+    <p>- Manage and control who can interact with your content and connect with you.</p>
+    </div></article>`,
+    appearance: `<article>
+    <h1>Appearance</h1>
+    <div>
+    <p>- customise the visual aspects of your VModel experience, including themes and layouts.</p>
+    </div></article>`,
+    security_and_privacy: `<article><h1>Security and Privacy</h1><div><p>- Enhance account security, manage privacy settings, and control data access.</p></div></article>`,
   },
 };
 
