@@ -28,31 +28,26 @@ const Navbar = () => {
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
-        <div className="flex  items-center gap-3 md:gap-6 ">
-          <Image
-            alt="vmodel logo"
-            height={65}
-            className="h-14 md:h-16"
-            src={logo}
-          />
-          <Link href={"/"}>
+        <Link href={"/"}>
+          <div className="flex  items-center gap-3 md:gap-6 ">
+            <Image
+              alt="vmodel logo"
+              height={65}
+              className="h-14 md:h-16"
+              src={logo}
+            />
             <h1 className="text-2xl md:text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
               Help Center
             </h1>
-          </Link>
-        </div>
+          </div>
+        </Link>
         {/* <span className="text-2xl font-bold">Help Center</span> */}
         <div className="flex ">
           <input
             type="search"
             placeholder="Search by keyword"
-            className=" text-black px-3 py-2 bg-[#ffffff] rounded-[21px] mr-2 hidden md:block"
+            className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black hidden md:block"
           />
-          <select className="bg-inherit border border-[#CCD2DB] rounded-[21px] p-1 hidden md:block">
-            <option className="bg-[#503C3B]">English</option>
-            <option className="bg-[#503C3B]">French</option>
-            <option className="bg-[#503C3B]">Spanish</option>
-          </select>
         </div>
         <div className="md:hidden">
           {/* <AiOutlineMenu size={32} onClick={() => setShow((init) => !init)} /> */}
