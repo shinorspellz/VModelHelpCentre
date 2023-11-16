@@ -4,7 +4,9 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Sidebar from "./faqComponents/Sidebar";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { FaChevronRight } from "react-icons/fa";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 /**Materail ui imports */
 import Box from "@mui/material/Box";
@@ -19,12 +21,14 @@ import ListItemText from "@mui/material/ListItemText";
 // import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Link from "next/link";
-import { generalTopics, subTopics } from "@/data";
+import { generalTopics, subTopicContent, subTopics } from "@/data";
 /**Materail ui imports ends here */
+
+import light from "@/public/sunlight.svg";
+import dark from "@/public/moondark.svg";
 
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
-
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
@@ -50,11 +54,12 @@ const Navbar = () => {
           />
         </div>
         <div className="md:hidden">
-          {/* <AiOutlineMenu size={32} onClick={() => setShow((init) => !init)} /> */}
-          <MenuTwo />
+          <AiOutlineMenu size={32} onClick={() => setShow((init) => !init)} />
+          {/* <MenuTwo /> */}
         </div>
+        {/* <img src={light.src} className="h-8 w-8 text-white" /> */}
 
-        {/* {show ? <Menu setShow={setShow} /> : null} */}
+        {show ? <Menu setShow={setShow} /> : null}
       </div>
     </nav>
   );
@@ -62,39 +67,135 @@ const Navbar = () => {
 
 export default Navbar;
 
-// const Menu = ({ setShow }) => {
-//   const pathname = usePathname();
-//   useEffect(() => {
-//     // Set the overflow property to 'hidden' when the component mounts
-//     document.body.style.overflow = "hidden";
-//     // Clean up: Set the overflow property back to 'auto' when the component unmounts
-//     return () => {
-//       document.body.style.overflow = "auto";
-//     };
-//   }, []);
-//   // useEffect(() => {
-//   //   setShow(false);
-//   // }, [pathname[0], pathname[1], pathname[2]]);
-//   return (
-//     <div
-//       id="nav_menu"
-//       className="h-screen w-screen top-0 left-0 bottom-2 overflow-x-auto fixed z-50 bg-[#00000067] "
-//       onClick={(e) => e.target.id === "nav_menu" && setShow(false)}
-//     >
-//       <div className="relative">
-//         <div className="absolute right-4 px-4  pt-4 top-16 bg-black  mb-2 rounded-[21px]">
-//           <div className="flex justify-between ">
-//             <h1 className="text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
-//               Help Centre
-//             </h1>
-//             <AiOutlineClose size={32} onClick={() => setShow(false)} />
-//           </div>
-//           <Sidebar show={"mobile"} />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const Menu = ({ setShow }) => {
+  const pathname = usePathname();
+  const currentroute = pathname.split("/")[1];
+  const subCurrentRoute = pathname.split("/")[2];
+  const hoverEffect = "hover:bg-[#edceaba6]";
+
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [mainMenu, setMainMenu] = useState("/");
+
+  const router = useRouter();
+  useEffect(() => {
+    // Set the overflow property to 'hidden' when the component mounts
+    document.body.style.overflow = "hidden";
+    // Clean up: Set the overflow property back to 'auto' when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+  useEffect(() => {
+    console.log(mainMenu);
+  }, [mainMenu]);
+  return (
+    <div
+      id="nav_menu"
+      className="h-screen w-full top-0 left-0  overflow-x-auto fixed z-50 bg-[#000] "
+    >
+      <div className=" fixed flex w-full justify-between bg-black h-14">
+        <h1 className="text-xl absolute top-4 left-5">Help Centre</h1>
+        <AiOutlineClose
+          size={32}
+          onClick={() => setShow(false)}
+          className="absolute top-4 right-5"
+        />
+      </div>
+      <div className="flex justify-center mt-14  flex-col">
+        <div className={`flex-col p-3 `}>
+          {!showSubMenu ? (
+            <>
+              <input
+                type="search"
+                placeholder="Search by keyword"
+                className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black w-full flex-1"
+              />
+              <div
+                onClick={() => {
+                  router.push("/");
+                  setShow(false);
+                }}
+                className=" "
+              >
+                <p
+                  className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer ${
+                    !currentroute ? "text-[#EDCEAB] font-medium" : "text-white"
+                  }`}
+                >
+                  {"Home"}
+                </p>
+              </div>
+              {generalTopics.map((topic, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <div className=" flex items-center w-full  ">
+                      <p
+                        onClick={() => {
+                          setShow(false);
+                          router.push("/" + topic.link);
+                        }}
+                        className={` flex-1 p-4 ${hoverEffect} rounded-[21px] cursor-pointer   ${
+                          topic.link === currentroute
+                            ? "text-[#EDCEAB] font-medium "
+                            : ""
+                        }`}
+                        key={index}
+                      >
+                        {topic.name}
+                      </p>
+                      <div
+                        className="p-5 cursor-pointer"
+                        onClick={() => {
+                          setShowSubMenu(true);
+                          setMainMenu(topic);
+                        }}
+                      >
+                        <FaChevronRight />
+                      </div>
+                    </div>
+                  </React.Fragment>
+                );
+              })}
+            </>
+          ) : (
+            <>
+              <div className=" ">
+                <div className="flex ml-5 mt-5 items-center">
+                  <FaArrowLeftLong
+                    size={24}
+                    className="cursor-pointer "
+                    onClick={() => setShowSubMenu(false)}
+                  />
+                  <h3 className="ml-8 text-lg font-medium ">{mainMenu.name}</h3>
+                </div>
+                <div className="pl-14 mt-3">
+                  {subTopics[mainMenu.link].map((topic, index) => {
+                    return (
+                      <div
+                        className={`text-sm  rounded-[21px] ${
+                          topic.link === subCurrentRoute
+                            ? "text-[#EDCEAB]"
+                            : " text-gray-300 "
+                        }${hoverEffect} p-2 m-2  `}
+                        key={index}
+                        onClick={() => {
+                          router.push("/" + mainMenu.link + "/" + topic.link);
+                          setShow(false);
+                        }}
+                      >
+                        <span>{topic.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const MenuTwo = () => {
   const [state, setState] = useState(false);

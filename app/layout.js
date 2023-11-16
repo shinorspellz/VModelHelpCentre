@@ -7,6 +7,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 // import { ThemeProvider } from "next-themes";
 import ThemeProvider from "@/lib/ThemeProvider";
 import Navbar from "@/components/Navbar";
+import Slider from "@/components/Slider";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,22 +23,28 @@ export default function RootLayout({ children }) {
       <body className={inter.className + " bg-[#503C3B] text-white"}>
         <Navbar />
 
-        <div className="p-3 md:p-6 relative ">
+        <div className="p-3 md:p-6 relative mb-10">
           <div
-            className="gap-2 md:gap-5  flex  max-w-5xl flex-col md:flex-row absolute top-0 left-0 right-0 bottom-0 mx-auto h-fit
+            className="gap-2 md:gap-5  flex  max-w-5xl flex-col  mx-auto h-fit
            "
           >
-            <div>
+            <h1 className="text-3xl my-3 text-[# EDCEAB] font-semibold text-center  ">
+              Welcome to VModel's Help Center
+            </h1>
+            <Slider />
+
+            <div className="flex flex-col md:flex-row">
               {/* <h1 className="text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
                 Help Center
               </h1> */}
               <div className="">
                 <Sidebar show={"notmobile"} />
               </div>
+              <div className="  flex-1 mx-4">{children}</div>
             </div>
-            <div className="  flex-1 mx-4">{children}</div>
           </div>
         </div>
+        <Footer />
       </body>
     </html>
   );
