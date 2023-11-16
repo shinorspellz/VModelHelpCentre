@@ -6,9 +6,6 @@ import React, { useEffect, useState } from "react";
 const Slider = () => {
   const pathname = usePathname();
 
-  if (!!pathname.split("/")[0] || !!pathname.split("/")[1]) {
-    return null;
-  }
   const DURATION = 7000;
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -27,8 +24,14 @@ const Slider = () => {
     };
   }, []);
 
+  if (!!pathname.split("/")[0] || !!pathname.split("/")[1]) {
+    return null;
+  }
   return (
     <div className="w-auto mb-12 mx-4">
+      <h1 className="text-3xl my-3 text-[# EDCEAB] font-semibold text-center  ">
+        Welcome to VModel&apos;s Help Center
+      </h1>
       {slideShowImages.map((item) => {
         if (item === slideShowImages[slideIndex]) {
           return (

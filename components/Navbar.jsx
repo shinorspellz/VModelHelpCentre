@@ -85,9 +85,7 @@ const Menu = ({ setShow }) => {
       document.body.style.overflow = "auto";
     };
   }, []);
-  useEffect(() => {
-    console.log(mainMenu);
-  }, [mainMenu]);
+
   return (
     <div
       id="nav_menu"
@@ -160,15 +158,15 @@ const Menu = ({ setShow }) => {
           ) : (
             <>
               <div className=" ">
-                <div className="flex ml-5 mt-5 items-center">
+                <div className="flex ml-2 mt-3 items-center">
                   <FaArrowLeftLong
                     size={24}
                     className="cursor-pointer "
                     onClick={() => setShowSubMenu(false)}
                   />
-                  <h3 className="ml-8 text-lg font-medium ">{mainMenu.name}</h3>
+                  <h3 className="ml-4 text-lg font-medium ">{mainMenu.name}</h3>
                 </div>
-                <div className="pl-14 mt-3">
+                <div className="pl-8 mt-3">
                   {subTopics[mainMenu.link].map((topic, index) => {
                     return (
                       <div
@@ -206,7 +204,6 @@ const MenuTwo = () => {
     ) {
       return;
     }
-    console.log("toggleDrawer");
     setState(!state);
   };
 

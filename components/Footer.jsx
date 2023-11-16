@@ -1,44 +1,68 @@
-// components/Footer.js
 import React from "react";
 
-const Footer = () => (
-  <footer className="bg-gray-800 text-white p-8">
-    <div className="container mx-auto">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div>
-          <h2 className="text-lg font-semibold mb-4">About Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Services</h2>
-          <ul>
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Contact</h2>
-          <p>Email: contact@example.com</p>
-          <p>Phone: +1 (123) 456-7890</p>
-        </div>
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
-          <div className="flex space-x-4">
-            <a href="#" className="text-white hover:text-gray-400">
-              Twitter
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              Facebook
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              Instagram
-            </a>
+const Footer = () => {
+  return (
+    <footer className="bg-gray-200 py-8 text-black">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between">
+          <div className="mb-4 md:mb-0">
+            <h2 className="text-lg font-semibold mb-2">Help</h2>
+            <ul className="list-none">
+              <li className="mb-1">
+                <a href="#">Help Center</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">Terms of Service</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">Cookie Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-4 md:mb-0">
+            <h2 className="text-lg font-semibold mb-2">For Businesses</h2>
+            <ul className="list-none">
+              <li className="mb-1">
+                <a href="#">How VModel Works</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">Create an Ad</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">Advertise on VModel</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mb-4 md:mb-0">
+            <h2 className="text-lg font-semibold mb-2">Community</h2>
+            <ul className="list-none">
+              <li className="mb-1">
+                <a href="#">VModel for Business</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">VModel for Creators</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">VModel for Public Figures</a>
+              </li>
+              <li className="mb-1">
+                <a href="#">VModel for Health & Wellness</a>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div className="mt-6 text-gray-600">
+          <p>&copy; 2023 VModel. All Rights Reserved.</p>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

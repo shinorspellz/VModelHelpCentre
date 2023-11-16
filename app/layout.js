@@ -28,9 +28,6 @@ export default function RootLayout({ children }) {
             className="gap-2 md:gap-5  flex  max-w-5xl flex-col  mx-auto h-fit
            "
           >
-            <h1 className="text-3xl my-3 text-[# EDCEAB] font-semibold text-center  ">
-              Welcome to VModel's Help Center
-            </h1>
             <Slider />
 
             <div className="flex flex-col md:flex-row">
