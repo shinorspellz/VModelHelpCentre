@@ -29,7 +29,7 @@ const Slider = () => {
   }
   return (
     <div className="w-auto mb-12 mx-4">
-      <h1 className="text-3xl my-3 text-[# EDCEAB] font-semibold text-center  ">
+      <h1 className="text-2xl md:text-3xl my-3 text-[# EDCEAB] font-semibold text-center  ">
         Welcome to VModel&apos;s Help Center
       </h1>
       {slideShowImages.map((item) => {
@@ -40,7 +40,7 @@ const Slider = () => {
               height={500}
               width={500}
               src={slideShowImages[slideIndex]}
-              className="rounded-[21px] w-full h-full aspect-video  object-cover animate-fade fade bg-[#68555481]"
+              className="rounded-[15px] lg:rounded-[21px] w-full h-full aspect-[3/4] md:aspect-video  object-cover animate-fade fade bg-[#68555481]"
               alt={`slide num ${slideIndex + 1}`}
             />
           );
@@ -56,7 +56,7 @@ const Slider = () => {
                 setSlideIndex(index);
               }}
               key={item}
-              className={`h-4 w-4 rounded-full bg-gray-300  ${
+              className={`h-2 w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 rounded-full bg-gray-300  ${
                 index === slideIndex ? "opacity-70" : " opacity-30 "
               } hover:bg-gray-200 cursor-pointer`}
             ></div>

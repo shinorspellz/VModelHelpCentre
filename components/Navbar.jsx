@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { MdClose, MdMenu } from "react-icons/md";
 import Sidebar from "./faqComponents/Sidebar";
 import Image from "next/image";
 import logo from "@/public/logo.svg";
@@ -26,7 +26,6 @@ import { generalTopics, subTopicContent, subTopics } from "@/data";
 
 import light from "@/public/sunlight.svg";
 import dark from "@/public/moondark.svg";
-
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
   return (
@@ -54,7 +53,11 @@ const Navbar = () => {
           />
         </div>
         <div className="md:hidden">
-          <AiOutlineMenu size={32} onClick={() => setShow((init) => !init)} />
+          <MdMenu
+            color="#edceab"
+            size={32}
+            onClick={() => setShow((init) => !init)}
+          />
           {/* <MenuTwo /> */}
         </div>
         {/* <img src={light.src} className="h-8 w-8 text-white" /> */}
@@ -89,25 +92,29 @@ const Menu = ({ setShow }) => {
   return (
     <div
       id="nav_menu"
-      className="h-screen w-full top-0 left-0  overflow-x-auto fixed z-50 bg-[#000] "
+      className="h-screen w-full top-0 left-0  overflow-x-auto fixed z-50 bg-[#503C3B] "
     >
-      <div className=" fixed flex w-full justify-between bg-black h-14">
-        <h1 className="text-xl absolute top-4 left-5">Help Centre</h1>
-        <AiOutlineClose
+      <div className=" fixed flex w-full justify-between bg-[#503C3B] h-14">
+        <h1 className="text-xl absolute top-4 left-5 font-medium text-[#EDCEAB] text-">
+          Help Centre
+        </h1>
+        <MdClose
           size={32}
           onClick={() => setShow(false)}
           className="absolute top-4 right-5"
         />
       </div>
       <div className="flex justify-center mt-14  flex-col">
-        <div className={`flex-col p-3 `}>
+        <div className={`flex-col `}>
           {!showSubMenu ? (
             <>
-              <input
-                type="search"
-                placeholder="Search by keyword"
-                className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black w-full flex-1"
-              />
+              <div className="w-full px-4 my-2">
+                <input
+                  type="search"
+                  placeholder="Search by keyword"
+                  className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black  flex-1 w-full"
+                />
+              </div>
               <div
                 onClick={() => {
                   router.push("/");
@@ -249,7 +256,7 @@ const MenuTwo = () => {
         className="text-white rounded-full"
       >
         <div className="md:hidden">
-          <AiOutlineMenu className="text-white" size={32} />
+          <MdMenu className="text-white" size={32} />
         </div>
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(!state)}>
@@ -257,7 +264,7 @@ const MenuTwo = () => {
         <div className="bg-black  text-white pt-3">
           <div className="flex mb-4 justify-between px-3">
             <h1 className="text-2xl text-[#edceab] font-medium">Help Centre</h1>
-            <AiOutlineClose
+            <MdClose
               size={32}
               onClick={toggleDrawer()}
               className="cursor-pointer"

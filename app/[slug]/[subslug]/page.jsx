@@ -29,6 +29,7 @@ const page = ({ params }) => {
         <h3 className="text-lg mb-3 text-[#edceab]">Related Topics</h3>
         <div className="flex flex-wrap">
           {subTopics[slug].map((topic, index) => {
+            if (topic.link === subslug) return null;
             return (
               <Link
                 href={"/" + slug + "/" + topic.link}
