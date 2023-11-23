@@ -255,6 +255,9 @@ export const subTopicContent = {
                   last location edit. Keep in mind that this may or may not be your precise geolocation, depending on when
                   you grant VModel access to your location. This geolocation feature is handy for discovering useful
                   services nearby and receiving recommendations for talent based on your location.</p>
+                  <div>
+                  - <a href="#" >How to change my location</a>
+                  </div>
                 </div>
               </article>`,
     grid_and_galleries: `<article>

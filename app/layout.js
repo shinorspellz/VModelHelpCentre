@@ -1,16 +1,10 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/faqComponents/Sidebar";
-import Image from "next/image";
-import logo from "@/public/logo.svg";
-import { AiOutlineMenu } from "react-icons/ai";
-// import { ThemeProvider } from "next-themes";
-import ThemeProvider from "@/lib/ThemeProvider";
 import Navbar from "@/components/Navbar";
-import Slider from "@/components/Slider";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header";
+import VModelFooter from "@/components/VModelFooter";
+import { dm_sans } from "@/utils/fonts";
 
 export const metadata = {
   title: "Help | VModel",
@@ -20,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en w-full">
-      <body className={inter.className + " bg-[#503C3B] text-white"}>
+      <body className={dm_sans.className + " bg-[#503C3B] text-white"}>
         <Navbar />
-
+        {/* <Header /> */}
         <div className="p-3 md:p-6 relative mb-10">
           <div
             className="gap-2 md:gap-5  flex  max-w-5xl flex-col  mx-auto h-fit
@@ -41,7 +35,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </div>
-        <Footer />
+        <VModelFooter />
       </body>
     </html>
   );

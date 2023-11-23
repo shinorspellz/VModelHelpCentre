@@ -1,5 +1,5 @@
 import Slider from "@/components/Slider";
-import { generalTopics } from "@/data";
+import { generalTopics, subTopics } from "@/data";
 // import { useTheme } from "next-themes";
 import Link from "next/link";
 import React from "react";
@@ -14,9 +14,11 @@ const page = () => {
       </h1>
       <div className="flex flex-wrap border border-gray-100 justify-stretch rounded-[17px]">
         {generalTopics.map((topic, index) => {
+          const subTopic = subTopics[topic.link];
+          const LinkToFirstSubTopic = subTopic[0];
           return (
             <Link
-              href={topic.link}
+              href={"/" + topic.link + "/" + LinkToFirstSubTopic.link}
               className="w-1/2 md:w-1/3 lg:w-1/3"
               key={index}
             >

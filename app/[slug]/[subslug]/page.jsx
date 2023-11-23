@@ -28,7 +28,7 @@ const page = ({ params }) => {
       </div>
       <div className="mt-7">
         <h3 className="text-lg mb-3 text-[#edceab]">Related Topics</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {subTopics[slug].map((topic, index) => {
             if (topic.link === subslug) return null;
             count++;

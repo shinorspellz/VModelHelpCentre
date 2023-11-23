@@ -39,15 +39,26 @@ const SearchPage = () => {
       <h1 className="text-2xl md:text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left">
         Search
       </h1>
-      <div className="flex">
+
+      <div className="relative">
         <input
-          type="text"
-          placeholder="Enter search term"
-          className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black  w-full"
-          value={searchTerm}
+          type="search"
+          className="w-full h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40"
           onChange={(e) => setSearchTerm(e.target.value)}
+          style={{
+            background: "rgb(237 206 171 / 50%)",
+          }}
+          placeholder="What are you looking for ?"
         />
-        <button onClick={handleSearch}>Search</button>
+        <button
+          className="absolute right-0 top-0 h-[45px] transition-all vm-btn-hover duration-[.3s] px-5 rounded-[60px] vm-text-sec"
+          style={{
+            background: "rgb(80 60 59 / 72%)",
+          }}
+          onClick={handleSearch}
+        >
+          Search
+        </button>
       </div>
       <div className="mt-3">
         <h2>

@@ -22,50 +22,74 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Link from "next/link";
 import { generalTopics, subTopicContent, subTopics } from "@/data";
+import { VMLogo } from "./VMLogo";
 /**Materail ui imports ends here */
 
-import light from "@/public/sunlight.svg";
-import dark from "@/public/moondark.svg";
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm) router.push("/search?q=" + decodeURIComponent(searchTerm));
+  };
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
-        <Link href={"/"}>
-          <div className="flex  items-center gap-3 md:gap-6 ">
-            <Image
+        <div className="flex  items-center gap-3 md:gap-6 ">
+          {/* <Image
               alt="vmodel logo"
               height={65}
               className="h-14 md:h-16"
               src={logo}
-            />
+            /> */}
+          <div>
+            <a
+              href="https://vmodelweb.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:inline-block"
+            >
+              <VMLogo isDark={true} width={53} height={53} />
+            </a>
+            <a
+              href="https://vmodelweb.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="md:hidden"
+            >
+              <VMLogo isDark={true} width={40} height={40} />
+            </a>
+          </div>
+          <a href={"/"}>
             <h1 className="text-2xl md:text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
               Help Center
             </h1>
-          </div>
-        </Link>
+          </a>
+        </div>
         {/* <span className="text-2xl font-bold">Help Center</span> */}
-        <div className="flex ">
-          {/* <form> */}
+
+        <form onSubmit={handleSearch} className="relative hidden md:block">
           <input
-            type="search"
-            placeholder="Search by keyword"
-            className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black hidden md:block"
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                // Perform your action when Enter key is pressed
-                console.log("Enter key pressed. Search Term:", e.target.value);
-                // Add your logic here, like triggering a search function
-                if (e.target.value)
-                  router.push(
-                    "/search?q=" + decodeURIComponent(e.target.value)
-                  );
-              }
+            className="w-full h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "
+            style={{
+              background: "rgb(237 206 171 / 50%)",
+            }}
+            placeholder="Search "
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
             }}
           />
-          {/* </form> */}
-        </div>
+          <button
+            className="absolute right-0 top-0 h-[45px] transition-all vm-btn-hover duration-[.3s] px-5 rounded-[60px] vm-text-sec"
+            style={{
+              background: "rgb(80 60 59 / 72%)",
+            }}
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
         <div className="md:hidden">
           <MdMenu
             color="#edceab"
@@ -124,14 +148,22 @@ const Menu = ({ setShow }) => {
             <>
               <div className="w-full px-4 my-2">
                 {/* <Link href={"/search"}> */}
-                <input
+                {/* <input
                   type="search"
+                  placeholder="Search by keyword"
+                  className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black  flex-1 w-full"
+                /> */}
+                <input
+                  className="w-full h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "
+                  style={{
+                    background: "rgb(237 206 171 / 50%)",
+                  }}
+                  type="search"
+                  placeholder="Search "
                   onClick={() => {
                     setShow(false);
                     router.push("/search");
                   }}
-                  placeholder="Search by keyword"
-                  className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black  flex-1 w-full"
                 />
                 {/* </Link> */}
               </div>
