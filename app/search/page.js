@@ -51,8 +51,8 @@ const SearchPage = () => {
       </div>
       <div className="mt-3">
         <h2>
-          Search results for &quot
-          <span className="font-bold">{searchTerm} </span>&quot
+          Search results for &quot;
+          <span className="font-bold">{searchTerm} </span>&quot;
         </h2>
 
         <div className="flex flex-col gap-5 mt-3">
