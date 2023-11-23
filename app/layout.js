@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Help | VModel",
-  description: "FAP for vModel.app",
+  description: "FAQ for VModel.app",
 };
 
 export default function RootLayout({ children }) {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             className="gap-2 md:gap-5  flex  max-w-5xl flex-col  mx-auto h-fit
            "
           >
-            <Slider />
+            {/* <Slider /> */}
 
             <div className="flex flex-col md:flex-row">
               {/* <h1 className="text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
               <div className="">
                 <Sidebar show={"notmobile"} />
               </div>
-              <div className="  flex-1 mx-4">{children}</div>
+              <div className="  flex-1 mx-2">{children}</div>
             </div>
           </div>
         </div>

@@ -28,6 +28,7 @@ import light from "@/public/sunlight.svg";
 import dark from "@/public/moondark.svg";
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
+  const router = useRouter();
   return (
     <nav className="w-full ">
       <div className="flex items-center justify-between p-4">
@@ -46,11 +47,24 @@ const Navbar = () => {
         </Link>
         {/* <span className="text-2xl font-bold">Help Center</span> */}
         <div className="flex ">
+          {/* <form> */}
           <input
             type="search"
             placeholder="Search by keyword"
             className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black hidden md:block"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                // Perform your action when Enter key is pressed
+                console.log("Enter key pressed. Search Term:", e.target.value);
+                // Add your logic here, like triggering a search function
+                if (e.target.value)
+                  router.push(
+                    "/search?q=" + decodeURIComponent(e.target.value)
+                  );
+              }
+            }}
           />
+          {/* </form> */}
         </div>
         <div className="md:hidden">
           <MdMenu
@@ -109,11 +123,17 @@ const Menu = ({ setShow }) => {
           {!showSubMenu ? (
             <>
               <div className="w-full px-4 my-2">
+                {/* <Link href={"/search"}> */}
                 <input
                   type="search"
+                  onClick={() => {
+                    setShow(false);
+                    router.push("/search");
+                  }}
                   placeholder="Search by keyword"
                   className=" text-black px-3 py-2 bg-[#ffffff] rounded-[9px] mr-2 border border-3 border-white outline-none focus-visible:border-black  flex-1 w-full"
                 />
+                {/* </Link> */}
               </div>
               <div
                 onClick={() => {

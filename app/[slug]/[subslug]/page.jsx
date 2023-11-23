@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const page = ({ params }) => {
   let contentHTML;
+  let count = 0;
   const { slug, subslug } = params;
   try {
     contentHTML = subTopicContent[slug][subslug];
@@ -27,17 +28,20 @@ const page = ({ params }) => {
       </div>
       <div className="mt-7">
         <h3 className="text-lg mb-3 text-[#edceab]">Related Topics</h3>
-        <div className="flex flex-wrap">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {subTopics[slug].map((topic, index) => {
             if (topic.link === subslug) return null;
+            count++;
             return (
               <Link
                 href={"/" + slug + "/" + topic.link}
-                className="w-1/2 md:w-1/3 lg:w-1/3"
+                className=""
                 key={index}
               >
                 <div
-                  className={`h-24 border mr-6 mb-6 border-[#a1a1a165] gap-5 flex flex-col justify-center items-center text-center p-2 rounded-md cursor-pointer hover:bg-[#a1a1a165]`}
+                  className={`h-24 border  border-[#a1a1a165] gap-5 flex flex-col justify-center items-center text-center p-2 rounded-[12px] cursor-pointer hover:bg-[#a1a1a165] 
+                 
+                  `}
                 >
                   <span>{topic.name}</span>
                 </div>

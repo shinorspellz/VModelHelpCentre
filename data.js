@@ -1,3 +1,29 @@
+// export function findSubtopicAndContent(searchTerm) {
+//   for (const topic of generalTopics) {
+//     if (
+//       topic.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       topic.link.toLowerCase().includes(searchTerm.toLowerCase())
+//     ) {
+//       const subtopics = subTopics[topic.link];
+//       if (subtopics) {
+//         const content = subTopicContent[topic.link];
+//         // Search within the content for the search term
+//         const searchResult = content
+//           .toLowerCase()
+//           .includes(searchTerm.toLowerCase());
+//         return {
+//           subtopics,
+//           content,
+//           searchResult,
+//         };
+//       } else {
+//         return { subtopics: [], content: "", searchResult: false };
+//       }
+//     }
+//   }
+//   return { subtopics: [], content: "", searchResult: false };
+// }
+
 export const generalTopics = [
   { name: "Portfolio", link: "portfolio", icon: "" },
   { name: "Business Hub", link: "business_hub", icon: "" },
