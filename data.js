@@ -29,10 +29,10 @@ export const generalTopics = [
   { name: "Business Hub", link: "business_hub", icon: "" },
   { name: "Creation Tools", link: "creation_tools", icon: "" },
   { name: "Feed", link: "feed", icon: "" },
-  { name: "User Options", link: "user_options", icon: "" },
+  { name: "Member Options", link: "member_options", icon: "" },
   { name: "Discover", link: "discover", icon: "" },
   { name: "Settings", link: "settings", icon: "" },
-  { name: "QR Code", link: "qr_code", icon: "" },
+  { name: "My Network", link: "my_network", icon: "" },
   { name: "Invite and Earn", link: "invite_and_learn", icon: "" },
   { name: "VModel Credits (VMC)", link: "vmodel_credits", icon: "" },
   { name: "Beta Dashboard", link: "beta_dashboard", icon: "" },
@@ -91,7 +91,7 @@ export const subTopics = {
     { name: "Slides", link: "slides" },
     // { name: "Post options", link: "post_options" },
   ],
-  user_options: [
+  member_options: [
     { name: "Follow", link: "follow" },
     { name: "Connect", link: "connect" },
     { name: "Job notifications", link: "job_notifications" },
@@ -157,6 +157,15 @@ export const subTopics = {
       link: "app_documentation",
     },
   ],
+  my_network: [
+    { name: "My Connections", link: "my_connections" },
+    { name: "Sent Requests", link: "sent_requests" },
+    { name: "Received requests", link: "received_requests" },
+    { name: "Followings", link: "followings" },
+    { name: "Followers", link: "followers" },
+    { name: "My contacts", link: "my_contacts" },
+    { name: "Blocked account", link: "blocked_account" },
+  ],
 };
 
 export const subTopicContent = {
@@ -219,7 +228,7 @@ export const subTopicContent = {
 </article>`,
     more_information: `<article>
                         <h1>More Information icon</h1>
-                        <div><p>Depending on your user type, the "More Information" icon reveals a variety of details about you. If you're
+                        <div><p>Depending on your member type, the "More Information" icon reveals a variety of details about you. If you're
                         a model, it might include your body measurements; if you're a photographer, it could showcase your
                         preferred camera type. Additionally, there are tools like social media analytics, allowing you to inform
                         clients about your performance on other platforms. The section also covers your years of experience in
@@ -255,9 +264,6 @@ export const subTopicContent = {
                   last location edit. Keep in mind that this may or may not be your precise geolocation, depending on when
                   you grant VModel access to your location. This geolocation feature is handy for discovering useful
                   services nearby and receiving recommendations for talent based on your location.</p>
-                  <div>
-                  - <a href="#" >How to change my location</a>
-                  </div>
                 </div>
               </article>`,
     grid_and_galleries: `<article>
@@ -562,7 +568,7 @@ export const subTopicContent = {
       </div>
     </article>`,
   },
-  user_options: {
+  member_options: {
     follow: `<article>
               <h1>Follow</h1>
               <div>
@@ -573,7 +579,7 @@ export const subTopicContent = {
                 and inspirations from the talents you admire. Enhance your VModel experience with the Follow
                 function, fostering connections and building a community that resonates with your creative
                 interests.
-                Tip: You can’t message a user if you only follow them. You must connect to send them a
+                Tip: You can’t message a member if you only follow them. You must connect to send them a
                 message.
                 </p>
               </div>
@@ -595,7 +601,7 @@ export const subTopicContent = {
               <div>
                 <p>
                 Receive Job Notifications tailored to your interests! When you follow or connect with your
-                favourite brands or users on VModel, you have the option to turn on Job Notifications. This means
+                favourite brands or members on VModel, you have the option to turn on Job Notifications. This means
                 you'll be alerted whenever they post new job opportunities, ensuring you never miss out on exciting chances that align with your creative passions. Stay in the loop and stay engaged with
                 the Job Notifications feature, keeping your opportunities at your fingertips. Customize your
                 experience on VModel to match your creative aspirations effortlessly.
@@ -606,19 +612,19 @@ export const subTopicContent = {
               <h2>How to turn on job notifications:</h2>
                 Activate Job Notifications with these simple steps:
                 <ol>
-                <li>1. Navigate to the user's profile.</li>
+                <li>1. Navigate to the member's profile.</li>
                 <li>2. Tap on the information button located at the top right.</li>
-                <li>3. Among the options presented, toggle the switch to turn on job notifications for that user.</li>
+                <li>3. Among the options presented, toggle the switch to turn on job notifications for that member.</li>
                 <div></div>  
                 <div></div>
-                Stay in the know about job opportunities from your favourite brands or users by customising your Job Notifications settings effortlessly on VModel.
+                Stay in the know about job opportunities from your favourite brands or members by customising your Job Notifications settings effortlessly on VModel.
                 </ol>
               </article>`,
     post_notifications: `<article>
     <h1>Connect</h1>
     <div>
       <p>
-      Get the latest updates with Post Notifications! When you follow your preferred brands or users on
+      Get the latest updates with Post Notifications! When you follow your preferred brands or members on
       VModel, you can activate Post Notifications to stay informed about their new content. This
       feature ensures that you receive timely alerts whenever they make a new post, keeping you
       connected and engaged with the latest creative expressions. Stay in sync with your favourite
@@ -631,9 +637,9 @@ export const subTopicContent = {
     <div></div>  
     <h2>How to turn on Posts Notifications:</h2>
       Turn on Post Notifications following these straightforward steps:      <ol>
-      <li>1. Visit the profile of the user or brand you want to follow closely.</li>
+      <li>1. Visit the profile of the member or brand you want to follow closely.</li>
       <li>2. Tap on the information button located at the top right corner of thier profile.</li>
-      <li>3. . In the options presented, toggle the switch to turn on post notifications for that user or brand.</li>
+      <li>3. . In the options presented, toggle the switch to turn on post notifications for that member or brand.</li>
       <div></div>  
       <div></div>
       Stay connected with the latest content from your favourite creators and brands on VModel by
@@ -644,15 +650,15 @@ export const subTopicContent = {
               <h1>How to turn on coupons notifications</h1>
               <div>
                   <ol>
-                    <li><p>1. Head to the profile of the user or brand from whom you want to receive coupon updates.</p></li>
+                    <li><p>1. Head to the profile of the member or brand from whom you want to receive coupon updates.</p></li>
                     <div></div>
                     <li><p>2. Tap on the information button situated at the top right corner of their profile.</p></li>
                     <div></div>
-                    <li><p>3. Within the options available, toggle the switch to turn on coupon notifications for that user or brand</p></li>
+                    <li><p>3. Within the options available, toggle the switch to turn on coupon notifications for that member or brand</p></li>
                   </ol>   
                   <div></div>
                   <div></div>
-                <p>Stay informed about the latest coupons and offers from your preferred creators, users or brands
+                <p>Stay informed about the latest coupons and offers from your preferred creators, members or brands
                 on VModel by effortlessly customising your coupon notification settings.</p>
               </div>
               </article>`,
@@ -675,7 +681,7 @@ export const subTopicContent = {
                   
                   <div></div>
                   
-                  <li>3. <strong>Suggestions on Connections: </strong><p>Receive recommendations on users to connect with, fostering
+                  <li>3. <strong>Suggestions on Connections: </strong><p>Receive recommendations on members to connect with, fostering
                   new and valuable relationships.</p></li>
                   
                   <div></div>
@@ -686,9 +692,9 @@ export const subTopicContent = {
                   <div></div>
 
                   <li>5. <strong>. VModel's Blog (Vell Magazine):</strong><p>Vell Magazine, VModel's digital creative online magazine, is a
-                  dedicated platform that aims to immerse users in the vibrant tapestry of the creative industry.
+                  dedicated platform that aims to immerse members in the vibrant tapestry of the creative industry.
                   This dynamic magazine serves as a hub for insightful articles, features, and updates tailored to
-                  keep users informed about the latest trends, innovations, and happenings within the creative
+                  keep members informed about the latest trends, innovations, and happenings within the creative
                   realm.</p></li>
 
                 </ol>
@@ -738,7 +744,7 @@ export const subTopicContent = {
         individuals who have made a significant impact within the VModel community, showcasing a
         blend of commercial success and positive engagement. It's a spotlight on excellence, featuring
         creators who stand out for their achievements and positive contributions, creating an enriching
-        experience for all VModel users.
+        experience for all VModel members.
         </p>
       </div>
     </article>`,
@@ -878,7 +884,7 @@ export const subTopicContent = {
     mandates verification for those participating in remote jobs or services, ensuring a secure and
     trustworthy environment. The grey tick signifies ID verification, while the blue tick represents
     verification based on fame within the VModel community. These verification measures
-    contribute to a safer and more reliable experience for all users.
+    contribute to a safer and more reliable experience for all members.
     </p>
     </div>
     </article>`,
@@ -892,7 +898,143 @@ export const subTopicContent = {
     <div>
     <p>- customise the visual aspects of your VModel experience, including themes and layouts.</p>
     </div></article>`,
-    security_and_privacy: `<article><h1>Security and Privacy</h1><div><p>- Enhance account security, manage privacy settings, and control data access.</p></div></article>`,
+    security_and_privacy: `<article><h1>Security and Privacy</h1><div><p>- Enhance account security, manage privacy settings, and control data access.</p></div>
+    </article>`,
+  },
+  my_network: {
+    my_connections: `<article>
+    <h1>My Connections</h1>
+    <p>
+    My Connections" on VModel is your gateway to building meaningful relationships within our
+    creative community. These are members you've connected with through mutual acceptance of connection requests, offering potential collaboration opportunities.
+    </p>
+    <div></div>
+    <p>
+    Your connections represent a valuable resource for finding like-minded individuals and engaging
+    in direct, secure conversations. It's not just about the number of connections but the quality,
+    fostering a community where collaboration thrives.
+    </p>
+    <div></div>
+
+    <p>
+    Remember, you can exclusively message members within your connections, ensuring a private
+    and secure communication environment. Connect, explore, and let the creativity flow within
+    your personalised network on VModel
+    </p>
+    </article>`,
+    sent_requests: `<article>
+    <h1>Sent Requests</h1>
+    <div>
+
+    <p>
+
+    Your "Sent Requests" on VModel allows you to track and manage the connection requests you've
+    extended to other members. This section provides insight into the status of your outreach efforts
+    My Connections
+    Sent Requests
+    —while they are pending. If your goal is to expand your creative network and connect with
+    individuals whose work resonates with you, "Sending Requests" is your window into the progress
+    of these outreach endeavours. When you send out a connection request to a member of the
+    VModel community, your account automatically follows the person, and you can unfollow them
+    from your followings section if you wish to.
+    
+    </p>
+    </div>
+    <div>
+    - <a href="#">How to send a connection request</a>
+    </div>
+    </article>`,
+    received_requests: `<article>
+    <h1> Received requests</h1>
+    <p> Your "Received Requests" section on VModel offers a glimpse into the connection requests others
+    have extended to you. It provides valuable insight into the potential collaborators who find
+    resonance in your work. As you navigate through these requests, you gain the opportunity to
+    build a diverse and dynamic network within the VModel community. Whether you're a model
+    sought after by photographers or a makeup artist attracting collaboration proposals, this section
+    serves as your gateway to expanding your creative connections</p>
+    </article>`,
+    followings: `<article>
+    <h1>Followings</h1>
+
+ <p>
+ Your "Followings" section on VModel serves as a curated list of individuals whose creative
+ journeys you've chosen to follow. This feature allows you to stay connected with the work,
+updates, and activities of those who inspire you within the VModel community. It's not just about
+extending connection requests; "Followings" is your personalised window into the ongoing
+creative endeavours of others. Whether you're a model following photographers, a photographer
+following models, or a makeup artist following other creatives, this section fosters a sense of
+community and continuous inspiration.
+</p>
+
+<div></div>
+<p>
+<b>
+Note:
+</b>
+ Any member(s) you sent a connection request to will appear in your followings. You can
+change this by simply unfollowing them.
+</p>
+
+<div>
+- <a href="#"> How to unfollow a member</a>
+</div>
+</article>`,
+    followers: `<article>
+    <h1>Followers</h1>
+    <p>
+    The "Followers" section on VModel is a dynamic collection of individuals who have chosen to
+stay connected with your creative journey. These are the members who find inspiration in your
+work and have opted to receive updates from your profile. Similar to "Sent Requests," this section
+offers insight into the progress of your outreach efforts—illustrating the growth of your creative
+network and the resonance your work has within the VModel community. Your followers represent
+an engaged audience, and each connection is a testament to the impact of your creative
+expression. Embrace the support from your followers and continue to share the magic of your
+artistic endeavours on VModel.
+    </p>
+    <div></div>
+    <p>
+    It's important to note that your connections will naturally be included in your followers, however,
+keep in mind that if any of your connections choose to unfollow you, they will no longer appear in
+your followers list</p>
+    </article>`,
+    my_contacts: `<article>
+    <h1>My Contacts</h1>
+    <p>
+    The "My Contacts" feature on VModel empowers you to bridge the gap between your online and
+    real-life creative networks. Here, you can invite your existing contacts to join the VModel
+    community, creating a seamless integration of your professional connections. Whether they are
+    clients, collaborators, or friends from your creative journey, inviting them to VModel ensures that
+    your online platform reflects the full spectrum of your real-life connections. Expand your reach
+    and strengthen your community by bringing your contacts into the VModel fold, making it a
+    holistic space for both online networking and real-world collaborations.
+    </p>
+    <div>
+    - <a href="#">
+    How to invite a contact to the VModel platform
+    </a>
+    
+    </div>
+    <div></div>
+    </article>`,
+    blocked_account: `<article>
+    <h1> Blocked Accounts </h1>
+    <p>
+
+    The "Blocked Accounts" section on VModel empowers you to maintain control over your online
+experience. This feature allows you to track and manage accounts that you have chosen to
+block, ensuring a tailored and secure creative environment. If you encounter content or
+interactions that are not aligned with your vision or values, "Blocked Accounts" serves as your
+protective shield. It's your window into maintaining a positive and respectful space within the
+VModel community, allowing you to curate your creative network in a way that resonates with
+your goals and values.
+    </p>
+    <div></div>
+    <ul>
+<li><a href="#">How to block an account</a></li>
+<li><a href="#">How to report an account</a></li>
+    </ul>
+    <div></div>
+    </article>`,
   },
 };
 
