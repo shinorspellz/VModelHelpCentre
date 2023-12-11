@@ -30,6 +30,7 @@ const Sidebar = ({ show }) => {
           <React.Fragment key={index}>
             <Link href={"/" + topic.link + "/" + LinkToFirstSubTopic.link}>
               <p
+             
                 className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer  ${
                   topic.link === currentroute
                     ? "text-[#EDCEAB] font-medium "

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const VMLogo = ({ isDark, isFull, width = 64, height = 64 }) => {
+export const VMLogo = ({ isDark, isFull, width, height }) => {
   return (
     <>
       {isFull ? (

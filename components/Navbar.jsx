@@ -7,7 +7,7 @@ import logo from "@/public/logo.svg";
 import { usePathname, useRouter } from "next/navigation";
 import { FaChevronRight } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
-
+import Ulist from "./UList";
 /**Materail ui imports */
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -24,7 +24,38 @@ import Link from "next/link";
 import { generalTopics, subTopicContent, subTopics } from "@/data";
 import { VMLogo } from "./VMLogo";
 /**Materail ui imports ends here */
-
+const listLink = [
+  {
+    id: 0,
+    url: "/",
+    linkText: "Home",
+    externalLinks: false,
+  },
+  {
+    id: 3,
+    url: "/about",
+    linkText: "About Us",
+    externalLinks: false,
+  },
+  {
+    id: 2,
+    url: "/help-center",
+    linkText: "Help Center",
+    externalLinks: false,
+  },
+  {
+    id: 4,
+    url: "/faq",
+    linkText: "FAQ",
+    externalLinks: false,
+  },
+  {
+    id: 1,
+    url: "https://vmodel-steel.vercel.app/",
+    linkText: "For Employees",
+    externalLinks: false,
+  },
+];
 const Navbar = () => {
   const [show, setShow] = React.useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,7 +81,13 @@ const Navbar = () => {
               rel="noreferrer"
               className="hidden md:inline-block"
             >
-              <VMLogo isDark={true} width={53} height={53} />
+            <VMLogo
+                  isFull={true}
+                  isDark={true}
+                  width={200}
+                  height={190}
+                  className="vm-logo-mobile"
+                />
             </a>
             <a
               href="https://vmodelweb.vercel.app/"
@@ -58,11 +95,16 @@ const Navbar = () => {
               rel="noreferrer"
               className="md:hidden"
             >
-              <VMLogo isDark={true} width={40} height={40} />
-            </a>
+              <VMLogo
+                  isFull={true}
+                  isDark={true}
+                  width={180}
+                  height={150}
+                  className="vm-logo-mobile"
+                />            </a>
           </div>
           <a href={"/"}>
-            <h1 className="text-2xl md:text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
+            <h1 className="text-2xl md:text-3xl my-3 text-[white] font-semibold text-center md:text-left ">
               Help Center
             </h1>
           </a>
@@ -71,8 +113,7 @@ const Navbar = () => {
 
         <form onSubmit={handleSearch} className="relative hidden md:block">
           <input
-            className="w-full h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "
-            style={{
+              class="w-[350px] h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "            style={{
               background: "rgb(237 206 171 / 50%)",
             }}
             placeholder="Search "
@@ -90,6 +131,30 @@ const Navbar = () => {
             Search
           </button>
         </form>
+        
+
+        <div className="w-[84px] vm-w-tab md:w-auto min-h-[64px] flex">
+              <div className="vm-hidden-md flex items-center content-center p-[10px] w-full flex-wrap ">
+                <div className="flex flex-col w-full">
+                  <nav className="flex">
+                    <ul className="ml-auto justify-end flex flex-wrap m-0 p-0 leading-normal relative z-[2] space-x-[30px]">
+                      {listLink.map((listItem) => (
+                        <div key={listItem?.id}>
+                          <Ulist
+                            url={listItem?.url}
+                            linkText={listItem?.linkText}
+                            isActive={listItem?.linkText==='Help Center'}
+                            externalLinks={listItem?.externalLinks}
+                          />
+                        </div>
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              </div>
+
+
         <div className="md:hidden">
           <MdMenu
             color="#edceab"

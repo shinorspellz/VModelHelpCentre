@@ -27,6 +27,7 @@ const page = ({ params }) => {
               >
                 <span>{topic.name}</span>
                 <AiOutlineRight size={18} />
+              
               </div>
             </Link>
           );

@@ -17,6 +17,13 @@
   --vm-lspacing-sm: -1.05px;
 }
 
+.selected {
+  background-color: #3d302c; 
+  border-radius: 3px;
+  padding: 5px;
+  /* Adjust the background color as needed */
+}
+
 body {
   overflow-x: hidden !important;
 }

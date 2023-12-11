@@ -3,6 +3,7 @@ import { egHTML, subTopicContent, subTopics } from "@/data";
 import React from "react";
 import "./styles.css";
 import Link from "next/link";
+import FeedbackComponent from "@/components/FeedBack";
 
 const page = ({ params }) => {
   let contentHTML;
@@ -24,7 +25,11 @@ const page = ({ params }) => {
   return (
     <div>
       <div className="faq">
+    
         <div dangerouslySetInnerHTML={{ __html: contentHTML || egHTML }} />
+        <div className="ml-[20px] mt-[20px]">
+          <FeedbackComponent articleId={subslug}/>
+        </div>
       </div>
       <div className="mt-7">
         <h3 className="text-lg mb-3 text-[#edceab]">Related Topics</h3>
