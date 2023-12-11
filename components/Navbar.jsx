@@ -27,25 +27,25 @@ import { VMLogo } from "./VMLogo";
 const listLink = [
   {
     id: 0,
-    url: "/",
+    url: "https://www.vmodelapp.com",
     linkText: "Home",
     externalLinks: false,
   },
   {
     id: 3,
-    url: "/about",
+    url: "https://www.vmodelapp.com/about",
     linkText: "About Us",
     externalLinks: false,
   },
   {
     id: 2,
-    url: "/help-center",
+    url: "/",
     linkText: "Help Center",
     externalLinks: false,
   },
   {
     id: 4,
-    url: "/faq",
+    url: "https://www.vmodelapp.com/faq",
     linkText: "FAQ",
     externalLinks: false,
   },
