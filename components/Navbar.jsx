@@ -113,7 +113,7 @@ const Navbar = () => {
 
         <form onSubmit={handleSearch} className="relative hidden md:block">
           <input
-              class="w-[350px] h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "            style={{
+              className="w-[350px] h-[45px] rounded-[80px] px-5 text-white outline-none placeholder:text-white placeholder:opacity-40 "            style={{
               background: "rgb(237 206 171 / 50%)",
             }}
             placeholder="Search "
