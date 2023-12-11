@@ -75,12 +75,13 @@ const Navbar = () => {
               src={logo}
             /> */}
           <div>
-            <a
-              href="https://vmodelweb.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
+          
+              <Link
               className="hidden md:inline-block"
-            >
+          href={"https://www.vmodelapp.com/"}
+        >
+     
+      
             <VMLogo
                   isFull={true}
                   isDark={true}
@@ -88,26 +89,29 @@ const Navbar = () => {
                   height={190}
                   className="vm-logo-mobile"
                 />
-            </a>
-            <a
-              href="https://vmodelweb.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
+                  </Link>
+         
+
+             <Link
               className="md:hidden"
-            >
+              href={"https://www.vmodelapp.com/"}
+             >
               <VMLogo
                   isFull={true}
                   isDark={true}
                   width={180}
                   height={150}
                   className="vm-logo-mobile"
-                />            </a>
+                />           </Link>      
           </div>
-          <a href={"/"}>
+          <Link
+           
+              href={"https://www.vmodelapp.com/"}
+             >
             <h1 className="text-2xl md:text-3xl my-3 text-[white] font-semibold text-center md:text-left ">
               Help Center
             </h1>
-          </a>
+            </Link>      
         </div>
         {/* <span className="text-2xl font-bold">Help Center</span> */}
 
