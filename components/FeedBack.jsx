@@ -1,7 +1,5 @@
 // FeedbackComponent.js
 import { useState, useEffect } from 'react';
-import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
-import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 
 function FeedbackComponent({ articleId }) {
   const [feedback, setFeedback] = useState(localStorage.getItem(`feedback_${articleId}`) || null);
@@ -16,20 +14,21 @@ function FeedbackComponent({ articleId }) {
   };
 
   return (
-    <div>
-      <p>Was this article helpful?</p>
+    <div className="text-center">
+      <p className='mb-3'>Was this article helpful?</p>
       <button
-        className={`mr-3 ${feedback === 'thumbsUp' ? 'selected' : ''}`}
+        className={`mr-3 border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsUp' ? 'bg-[#edceab] text-white' : ''}`}
         onClick={() => setFeedback('thumbsUp')}
       >
-        <ThumbUpOutlinedIcon style={{ color: '#edceab' }} />
+        Yes
       </button>
       <button
-        className={`${feedback === 'thumbsDown' ? 'selected' : ''}`}
+        className={`border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsDown' ? 'bg-[#edceab] text-white' : ''}`}
         onClick={() => setFeedback('thumbsDown')}
       >
-        <ThumbDownAltOutlinedIcon style={{ color: '#edceab' }} />
+        No
       </button>
+      <div className='mt-3 text-sm'>0 out of 0 found this helpful</div>
       {/* <button onClick={submitFeedback}>Submit Feedback</button> */}
     </div>
   );
