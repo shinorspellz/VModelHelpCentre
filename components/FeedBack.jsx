@@ -17,13 +17,13 @@ function FeedbackComponent({ articleId }) {
     <div className="text-center">
       <p className='mb-3'>Was this article helpful?</p>
       <button
-        className={`mr-3 border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsUp' ? 'bg-[#edceab] text-white' : ''}`}
+        className={`mr-3 border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsUp' ? 'bg-secondary text-primary border border-solid border-secondary' : ''}`}
         onClick={() => setFeedback('thumbsUp')}
       >
         Yes
       </button>
       <button
-        className={`border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsDown' ? 'bg-[#edceab] text-white' : ''}`}
+        className={`border border-solid border-edceab px-4 py-2 rounded text-edceab ${feedback === 'thumbsDown' ? 'bg-secondary text-primary border border-solid border-secondary' : ''}`}
         onClick={() => setFeedback('thumbsDown')}
       >
         No

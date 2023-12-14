@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
               {/* <h1 className="text-3xl my-3 text-[#EDCEAB] font-semibold text-center md:text-left ">
                 Help Center
               </h1> */}
-              <div className="">
+              <div className="mr-7">
                 <Sidebar show={"notmobile"} />
               </div>
               <div className="  flex-1 mx-2">{children}</div>

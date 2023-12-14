@@ -171,15 +171,15 @@ const VModelFooterN = ({ noPadd = false }) => {
         <section
           className={`${!noPadd ? "pt-[2%]" : ""} pb-[6%] vm-bg contain`}
         >
-          <div className="md:lg:py-[100px] pt-9 md:pt-0 md:pb-6 lg:pb-0 flex flex-col md:flex-row md:mb-9 relative">
+          <div className="md:lg:py-[100px] p-7 pt-9 md:pt-0 md:pb-6 lg:pb-0 flex flex-col md:flex-row md:mb-9 relative">
             <div className="w-full md:w-[45%] flex flex-col justify-between md:pr-[10%]">
               <div className="space-y-3">
                 <div className="flex items-center justify-center md:block -ml-2 mb-5">
                   <VMLogo
                     isFull={true}
                     isDark={true}
-                    width={160}
-                    height={160}
+                    width={80}
+                    height={100}
                   />
                 </div>
                 <div
@@ -219,7 +219,7 @@ const VModelFooterN = ({ noPadd = false }) => {
               </div>
               <div className="w-full mt-6 md:mt-0 md:w-[55%]">
                 <div className="relative m-auto w-full">
-                  <ul className="flex justify-between text-center lg:text-right w-full socialMedia">
+                  <ul className="flex mt-7 justify-between text-center lg:text-right w-full socialMedia">
                     <SocialHandle
                       PIcon={` <svg
                       className="svg-inline--fa fa-twitter fa-w-16"

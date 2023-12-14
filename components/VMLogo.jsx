@@ -8,7 +8,7 @@ export const VMLogo = ({ isDark, isFull, width, height }) => {
           alt="VModel Logo"
           priority
           src={`/assets/images/logo/${
-            isDark ? "vmodel-logo-full.png" : "vmodel-logo-full.png"
+            isDark ? "loo-white.png" : "vmodel-logo.png"
           }`}
           width={width}
           height={height}
