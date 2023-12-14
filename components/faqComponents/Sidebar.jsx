@@ -12,7 +12,7 @@ const Sidebar = ({ show }) => {
 
   const showMobile = show !== "mobile" ? "hidden  md:flex" : "flex md:hidden";
   return (
-    <div className={`flex-col min-w-[290px]  max-w-[290px] ${showMobile}`}>
+    <div className={`flex-col min-w-[200px]  max-w-[200px] ${showMobile}`}>
       <Link href={"/"}>
         <p
           className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer ${
