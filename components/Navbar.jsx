@@ -85,8 +85,8 @@ const Navbar = () => {
             <VMLogo
                   isFull={true}
                   isDark={true}
-                  width={200}
-                  height={190}
+                  width={80}
+                  height={100}
                   className="vm-logo-mobile"
                 />
                   </Link>
@@ -99,8 +99,8 @@ const Navbar = () => {
               <VMLogo
                   isFull={true}
                   isDark={true}
-                  width={180}
-                  height={150}
+                  width={60}
+                  height={100}
                   className="vm-logo-mobile"
                 />           </Link>      
           </div>

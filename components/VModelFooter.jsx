@@ -178,8 +178,8 @@ const VModelFooterN = ({ noPadd = false }) => {
                   <VMLogo
                     isFull={true}
                     isDark={true}
-                    width={160}
-                    height={160}
+                    width={80}
+                    height={100}
                   />
                 </div>
                 <div

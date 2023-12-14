@@ -31,7 +31,7 @@ const Sidebar = ({ show }) => {
             <Link href={"/" + topic.link + "/" + LinkToFirstSubTopic.link}>
               <p
              
-                className={`p-4 ${hoverEffect} rounded-[21px] cursor-pointer  ${
+                className={`w-[200px] p-4 ${hoverEffect} rounded-[21px] cursor-pointer  ${
                   topic.link === currentroute
                     ? "text-[#EDCEAB] font-medium "
                     : ""
@@ -42,7 +42,7 @@ const Sidebar = ({ show }) => {
               </p>
             </Link>
             {topic.link === currentroute ? (
-              <div className=" ">
+              <div className="w-[200px] ">
                 {subTopic.map((topic, index) => {
                   return (
                     <Link
