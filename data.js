@@ -34,7 +34,6 @@ export const generalTopics = [
   { name: "Settings", link: "settings", icon: "" },
   { name: "My Network", link: "my_network", icon: "" },
   { name: "Invite and Earn", link: "invite_and_learn", icon: "" },
-  { name: "VModel Credits (VMC)", link: "vmodel_credits", icon: "" },
   { name: "Beta Dashboard", link: "beta_dashboard", icon: "" },
   { name: "VModel Credits (VMC)", link: "vmodel_credits", icon: "" },
 ];
