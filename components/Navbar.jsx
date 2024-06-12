@@ -106,7 +106,7 @@ const Navbar = () => {
           </div>
           <Link
            
-              href={"https://www.vmodelapp.com/"}
+              href={"/"}
              >
             <h1 className="text-2xl md:text-3xl my-3 text-[white] font-semibold text-center md:text-left ">
               Help Center
