@@ -42,6 +42,7 @@ export const subTopics = {
   portfolio: [
     { name: "Your VModel Portfolio", link: "vmodel_portfolio" },
     { name: "Portfolio image", link: "portfolio_image" },
+    { name: "Personality", link: "personality" },
     { name: "Bio", link: "bio" },
     { name: "Menu icon", link: "menu_icon" },
     { name: "More information ", link: "more_information" },
@@ -129,10 +130,10 @@ export const subTopics = {
     },
   ],
   vmodel_credits: [
-    {
-      name: "VMC and how they work",
-      link: "vmc_and_how_they_work",
-    },
+    // {
+    //   name: "VMC and how they work",
+    //   link: "vmc_and_how_they_work",
+    // },
     {
       name: "How to earn VMC",
       link: "how_to_earn_vmc",
@@ -143,18 +144,18 @@ export const subTopics = {
       name: "Announcements",
       link: "announcements",
     },
-    {
-      name: "Upcoming features",
-      link: "upcoming_features",
-    },
-    {
-      name: "Updates documentation",
-      link: "updates_documentation",
-    },
-    {
-      name: "App Documentation",
-      link: "app_documentation",
-    },
+    // {
+    //   name: "Upcoming features",
+    //   link: "upcoming_features",
+    // },
+    // {
+    //   name: "Updates documentation",
+    //   link: "updates_documentation",
+    // },
+    // {
+    //   name: "App Documentation",
+    //   link: "app_documentation",
+    // },
   ],
   my_network: [
     { name: "My Connections", link: "my_connections" },
@@ -168,15 +169,37 @@ export const subTopics = {
 };
 
 export const subTopicContent = {
+  invite_and_learn:{
+    inviting_contacts:`
+     <article>
+     <h1>Inviting Contacts</h1>
+             <p>
+When you a invite a friend to join VModel, you and them get to enjoy your next booking without our commission fee!.</p>
+    </article>
+    `
+
+  },
+  beta_dashboard: {
+    announcements: `
+     <article>
+     <h1>Announcements</h1>
+             <p>This dashboard is for all beta testers of our app. Since our app is in the testing phase, users here have the ability to leave us feedback and more.</p>
+    </article>
+    `
+  },
+  vmodel_credits: {
+    how_to_earn_vmc: `
+    <article>
+     <h1>How to earn VMC</h1>
+             <p>You can earn VModel VMC by interacting with other people on the app, liking pictures, videos, commenting, creating your portfolio and posting, getting booked or booking other people, giving us app feedback and much more! </p>
+    </article>
+    `
+  },
   portfolio: {
     vmodel_portfolio: `
         <article>
         <h1> Your VModel Portfolio </h1>
-        <p>A Portfolio on VModel is your digital showcase, a personalised space where you, as a creative
-        individual, present your skills, work, and offerings to the vibrant VModel community. It goes
-        beyond a traditional resume or profile by providing a dynamic and visually engaging
-        representation of your creative identity.</p>
-        
+        <p>A Portfolio on VModel is where you can showcase your work. A space where you as a creative can share your skills, work, offerings, services and more, to the world of the VModel community - a space for all. It goes beyond a traditional resume or profile by providing a dynamic and visually engaging representation of your creative identity.</p>
         <div></div>
         <ul>
         <li>Grids</li>
@@ -206,16 +229,21 @@ export const subTopicContent = {
                       </article>`,
     bio: `<article><h1>Bio</h1>
               <div>
-            <p> Introduce yourself to the VModel community with a captivating bio! Introduce yourself to the VModel community with a captivating bio! Share what makes you tick, your
-            passions, and the story behind your creative journey. Remember, on VModel, longer bios are like your
-            space to really express yourself. They let others get to know you better before they even think about
-            booking or reaching out. So, spill the beans and let your creativity shine!
+            <p> Introduce yourself to the VModel community with a captivating bio! Share something about yourself, your passions or the story behind your creative journey. On VModel, we allow you to express yourself with longer bios. It's a great way to let others know you better before they even think about booking or reaching out. So, spill the beans and let your creativity shine!
             </p>
             <div></div>
               <ul><li><a>How to edit/change your Bio</a></li></ul>
               </div>
               <div></div>
               </article>`,
+    personality:`
+    <article>
+    <h1>Personality</h1>
+    <div>
+    <p>
+Optionally showcase your personality with the Myers-Briggs Type Indicator (MBTI). This assessment tool categorizes individuals into 16 distinct personality types. People use the MBTI to gain insights into their personality traits, improve self-awareness, and enhance interpersonal relationships. Additionally, it is used for career development and team-building purposes. Many people also share their MBTI results as a form of self-expression, allowing them to communicate their unique personality traits to others.    </p>
+    </div>
+    `,
 
     menu_icon: `<article>
     <h1>Menu icon</h1>
@@ -239,10 +267,8 @@ export const subTopicContent = {
     star_sign: `<article>
                     <h1> Star sign</h1>
                     <div>
-                      <p> Explore the Star Sign feature in your portfolio to showcase your zodiac sign and creative character to the
-                      VModel community. It's not just a cosmic touch – it also helps in recommending individuals who vibe with
-                      similar creative energies. Considering personalities do vary and matter, it can be a valuable factor when
-                      making booking decisions.</p>
+                      <p> Have fun and explore the Star Sign feature in your portfolio. If star signs is your thing, you can showcase your zodiac sign on your profile at VModel. This feature is of-course optional and you can turn it off in your settings!
+</p>
                     </div>
                     <div></div>
                     <ul><li><a href="#">How star signs work</a></li></ul>
@@ -251,8 +277,7 @@ export const subTopicContent = {
                             <h1>Reviews and Feedback</h1>
                             <div>
                               <p>
-                              On VModel, members can receive star ratings and reviews from other members or, in some cases, from
-                              VModel itself. Keep reading to learn more about how reviews and ratings work.
+                             On VModel, members can receive star ratings and reviews from other members or, in some cases, from VModel itself. These reviews provide valuable insights into a member's skills and contributions, helping others make informed decisions and fostering trust within the community. Keep reading to learn more about how reviews and ratings work.
                               </p>
                             </div>
                           </article>`,
@@ -292,11 +317,7 @@ export const subTopicContent = {
                       <h1>Business Hub</h1>
                       <div>
                         <p>
-                        Welcome to the VModel Business Hub – your go-to destination for all things professional on VModel.
-                        Whether you're delving into analytics, checking your earnings, or managing your availability, the
-                        Business Hub has you covered. It's your central command for keeping tabs on your professional journey,
-                        tracking your progress, and more, all conveniently consolidated in one place. Your career, simplified and
-                        streamlined with VModel's Business Hub. Here are the tools you can access with the VModel Hub:
+                       Welcome to the VModel Business Hub – your go-to destination for all things professional on VModel. Whether you're delving into analytics, checking your earnings, or managing your availability, the Business Hub has you covered. It's your central command for keeping tabs on your professional journey, tracking your progress, and more, all conveniently consolidated in one place. Your career, simplified and streamlined with VModel's Business Hub. Here are the tools you can access with the VModel Hub:
                         </p>
                       </div>
                     </article>`,
