@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-6 text-gray-600">
-          <p>&copy; 2023 VModel. All Rights Reserved.</p>
+          <p>&copy; 2025 Voltis Labs. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
